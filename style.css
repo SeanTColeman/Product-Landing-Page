@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+* { padding: 0; margin: 0; }
+
+html, body {
+  font-family: sans-serif;
+  font-size: 18px;
+  background: #dadada;
+  scroll-behavior: smooth;
+}
+
+li { list-style: none;}
+
+a {text-decoration: none; color: inherit;}
+
+p {line-height: 28px;}
+
+input {
+  padding: 8px;
+  font-size: 18px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+
+button {
+  margin: 15px 0;
+  padding: 12px 18px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border:none;
+  border-radius: 3px;
+  background: orange;
+  font-size: 18px;
+  font-weight: bold;
+  transition: .2s ease-in;
+}
+
+button:hover {
+  transform: scale(1.03);
+  background: hsl(50, 100%, 50%);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: #eee;
+  padding: 10px;
+  z-index: 5;
+  box-shadow: 0 4px 8px -5px black;
+}
+
+h1 {
+  font-size: 150%;
+  font-family: 'Special Elite', cursive;
+}
+
+h3 { margin: 10px 0;}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 8px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 90%;
+}
+
+ul {
+  margin: 10px 0;
+}
+
+ nav li { margin-top: 10px; }
+
+ main {
+   padding: 20px;
+   padding-top: 200px;
+   margin: 0 auto;
+   background: #eee;
+ }
+
+ section { padding: 40px 0; }
+
+ /* Hero Section */
+
+ section#hero {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   border-bottom: 2px solid #ccc;
+   padding: 50px 0;
+ }
+
+ section#hero form {
+   margin-top: 20px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ #hero input {
+   width: 110%;
+ }
+
+/* Features section */
+
+#features {
+  border-bottom: 2px solid #ccc;
+  text-align: center;
+}
+
+.feature {
+  margin: 70px 0 ;
+}
+
+.feature:first-of-type,
+.feature:last-of-type {
+  margin: 15px 0;
+}
+
+.icon {
+  display: none;
+}
+
+.feature h2 {  margin-bottom: 10px; }
+
+/* How It works */
+section#how-it-works {
+  border-bottom: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+}
+
+iframe {
+  max-width: 560px;
+  width: 100%;
+}
+
+
+/* Pricing */
+section#pricing {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.price-feature {
+  background: #ccc;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 10px;
+  padding-bottom: 15px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.price-feature h3 {
+   font-size: 30px;
+}
+
+.level {
+  display: block;
+  background: #aaa;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.level h2 { font-size: 22px;}
+
+.price-feature ul {
+  margin: 15px 0;
+}
+
+.price-feature li {
+  margin: 10px 0;
+  font-size: 15;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  margin: 0 auto;
+  background: #bbb;
+  font-size: 80%;
+}
+
+footer ul {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+footer ul li {
+  padding: 0 10px;
+  border-right: 1px solid black;
+}
+
+footer ul li:last-of-type {
+
+  border-right: none;
+}
+
+footer a {
+  text-decoration: underline;
+}
+
+footer span {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 90%;
+}
+
+/* Responsive Rules */
+@media screen and (min-width: 550px) {
+  .icon {
+    display: inline;
+    font-size: 60px;
+    color: orange;
+    min-width: 65px;
+    width: 10vw;
+    margin-right: 25px;
+  }
+
+  .desc {
+    text-align: left;
+    width: 80vw;
+  }
+  .feature {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .logo {
+    justify-content: flex-start;
+  }
+
+  nav {
+    margin-top: 0;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0 15px;
+  }
+
+  main {
+    padding-top: 90px;
+  }
+
+  section#pricing {
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  main, footer {
+    max-width: 1000px;
+  }
+
+}
